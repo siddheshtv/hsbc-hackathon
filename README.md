@@ -69,7 +69,7 @@ Type|StackingClassifier
 A second XGBoost model with the same parameters as xgb_model
 The stacking classifier combines the predictions from xgb_model and lgbm_model, using them as input to a final XGBoost model that refines the predictions for improved accuracy.
 
-![alt text](image.png)
+![Stacking Classifier](https://raw.githubusercontent.com/siddheshtv/hsbc-hackathon/main/image.png)
 
 ## Evaluation Metrics
 
@@ -90,7 +90,7 @@ The stacking classifier combines the predictions from xgb_model and lgbm_model, 
 
 ## Analysis Overview
 
-![alt text](image-1.png)
-![alt text](image-2.png)
-![alt text](image-3.png)
-![alt text](image-4.png)
+![Transaction Amount Distribution](https://raw.githubusercontent.com/siddheshtv/hsbc-hackathon/main/image-1.png)
+![Transaction Amount by Merchant Category](https://raw.githubusercontent.com/siddheshtv/hsbc-hackathon/main/image-2.png)
+![Fraud vs Not Fraud](https://raw.githubusercontent.com/siddheshtv/hsbc-hackathon/main/image-3.png)
+![Merchant ID Distribution](https://raw.githubusercontent.com/siddheshtv/hsbc-hackathon/main/image-4.png)
