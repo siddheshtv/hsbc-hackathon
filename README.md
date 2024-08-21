@@ -8,7 +8,7 @@ My submission uses a stacked ensemble model combining <strong>XGBoost</strong> a
 
 In this data preprocessing pipeline, several steps are undertaken to clean and prepare the dataset for machine learning:
 
-<strong>Dropping Irrelevant Columns</strong>:
+<strong>Feature Importance</strong>:
 
 Columns such as step, customer, zipcodeOri, and zipMerchant are dropped from the dataset as they may not provide meaningful insights for the model.
 Handling Missing and Categorical Data:
@@ -26,6 +26,13 @@ The amount column is standardized using StandardScaler to ensure that all featur
 In this dataset, only 1.2% of the transactions are fraudulent, while 98.8% are not. Such a severe class imbalance can lead to misleading results if accuracy is used as the primary evaluation metric. For instance, a model that predicts all transactions as non-fraudulent would achieve 98.8% accuracy but would be completely ineffective at identifying fraud.
 
 To address this, <strong>Synthetic Minority Over-sampling Technique (SMOTE)</strong> was used. SMOTE artificially increases the number of fraudulent transactions by generating synthetic samples, balancing the dataset and improving the model's ability to detect fraud. This technique helps ensure that the model learns from both classes effectively, making metrics like precision, recall, and F1 score more reliable indicators of performance in this context.
+
+<strong>Insights from Data</strong>
+
+![Transaction Amount Distribution](https://raw.githubusercontent.com/siddheshtv/hsbc-hackathon/main/image-1.png)
+![Transaction Amount by Merchant Category](https://raw.githubusercontent.com/siddheshtv/hsbc-hackathon/main/image-2.png)
+![Fraud vs Not Fraud](https://raw.githubusercontent.com/siddheshtv/hsbc-hackathon/main/image-3.png)
+![Merchant ID Distribution](https://raw.githubusercontent.com/siddheshtv/hsbc-hackathon/main/image-4.png)
 
 ## Models used
 
@@ -87,10 +94,3 @@ The stacking classifier combines the predictions from xgb_model and lgbm_model, 
 | True Positives (TP)               | 100723 |
 | True Positive Rate (TPR) / Recall | 0.9915 |
 | False Positive Rate (FPR)         | 0.0207 |
-
-## Analysis Overview
-
-![Transaction Amount Distribution](https://raw.githubusercontent.com/siddheshtv/hsbc-hackathon/main/image-1.png)
-![Transaction Amount by Merchant Category](https://raw.githubusercontent.com/siddheshtv/hsbc-hackathon/main/image-2.png)
-![Fraud vs Not Fraud](https://raw.githubusercontent.com/siddheshtv/hsbc-hackathon/main/image-3.png)
-![Merchant ID Distribution](https://raw.githubusercontent.com/siddheshtv/hsbc-hackathon/main/image-4.png)
